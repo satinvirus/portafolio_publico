@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/recursos/57-578421_totoro-and-no-face-hd-png-download.png" type=".png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth@0,75..100;1,75..100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <form name="calculadora" class="forma">
+
+        <h3 style="color: aliceblue; font-size: 30px;">Calculadora</h3>
+
+        <input type="textfield" name="resultado" value="" readonly class="resultado">
+
+        <br>
+        <input type="button" value="(" class="grey-white" onclick="document.calculadora.resultado.value+='('">
+        <input type="button" value="+/-" class="grey-white" onclick="document.calculadora.resultado.value=eval(document.calculadora.resultado.value+='*-1')">
+        <input type="button" value=")" class="grey-white" onclick="document.calculadora.resultado.value+=')'">
+        <input type="button" value="/" class="orange" onclick="document.calculadora.resultado.value+='/'">
+
+        <br>
+        <input type="button" value="7" class="normal" onclick="document.calculadora.resultado.value+='7'">
+        <input type="button" value="8" class="normal" onclick="document.calculadora.resultado.value+='8'">
+        <input type="button" value="9" class="normal" onclick="document.calculadora.resultado.value+='9'">
+        <input type="button" value="*" class="orange" onclick="document.calculadora.resultado.value+='*'">
+
+        <br>
+        <input type="button" value="4" class="normal" onclick="document.calculadora.resultado.value+='4'">
+        <input type="button" value="5" class="normal" onclick="document.calculadora.resultado.value+='5'">
+        <input type="button" value="6" class="normal" onclick="document.calculadora.resultado.value+='7'">
+        <input type="button" value="-" class="orange" onclick="document.calculadora.resultado.value+='-'">
+
+        <br>
+        <input type="button" value="1" class="normal" onclick="document.calculadora.resultado.value+='1'">
+        <input type="button" value="2" class="normal" onclick="document.calculadora.resultado.value+='2'">
+        <input type="button" value="3" class="normal" onclick="document.calculadora.resultado.value+='3'">
+        <input type="button" value="+" class="orange" onclick="document.calculadora.resultado.value+='+'">
+        <br>
+        <input type="button" value="C" class="normal" onclick="document.calculadora.resultado.value = document.calculadora.resultado.value.slice(0, -1)">
+        <input type="reset" value="AC" class="normal">
+        <input type="button" value="0" class="normal" onclick="document.calculadora.resultado.value+='0'">
+        <input type="button" value="." class="orange" onclick="document.calculadora.resultado.value+='.'">
+        
+        <br>
+        <input type="button" value="=" class="orange largo" onclick="document.calculadora.resultado.value=eval(document.calculadora.resultado.value)">
+
+
+    </form>
+
+    
+</body>
+</html>

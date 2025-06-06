@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/recursos/57-578421_totoro-and-no-face-hd-png-download.png" type=".png">
+
+    
+    
+
+</head>
+<body>
+
+
+  <h1 style="color: aliceblue; font-size: 40px;" id="texto1">Jugador 1: <h1 id="puntaje"></h1></h1>
+  <h1 style="color: aliceblue; font-size: 40px;" id="texto2">Jugador 2: <h1 id="puntaje"></h1></h1>
+  <div id="juego">
+
+    
+
+    <div id="cuadro"></div>
+
+    <div id="esfera"></div>
+
+
+    <div id="objetivo"></div>
+
+    
+
+  </div>
+
+  <script src="/js/esfera.js"></script>
+  <script>
+    esfera();
+  </script>
+
+
+  <script src="/js/movimiento.js" ></script>
+
+  <script>
+    move();
+  </script>
+
+  <script src="/js/objetivo.js"></script>
+  <script>
+    moveobjetivo();
+  </script>
+
+
+
+<button href="/htmls/juego1.html">Entrar</button>
+
+
+
+</body>
+
+</html>

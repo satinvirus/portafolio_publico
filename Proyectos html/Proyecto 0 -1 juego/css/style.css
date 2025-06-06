@@ -1,0 +1,115 @@
+
+body,html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+body{
+
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.699), rgb(0, 0, 0));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+
+
+}
+
+
+
+
+#juego{
+
+    height: 600px;
+    width: 900px;
+    background-color: rgba(0, 0, 0, 0.856);
+    position:relative;
+    left: 25%;
+    top: 0%;
+    border-radius: 20px;
+
+
+
+
+}
+
+
+#texto1{   
+
+    position: relative;
+
+    height: 50px;
+    width: 300px;
+
+    left: 25%;
+    top: 8%;
+    text-transform: uppercase;
+
+}
+#texto2{
+    height: 50px;
+    width: 300px;
+
+    position: relative;
+
+    left: 45%;
+    top: 1.5%;
+    text-transform: uppercase;
+    
+
+}
+
+
+#cuadro{
+
+      
+
+    width: 40px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+#objetivo{
+
+   
+
+    width: 40px;
+    height: 200px;
+
+    background-color: rgba(0, 153, 255, 0.4);
+    position: absolute;
+    top: 400px;
+    left: 860px;
+
+
+}
+
+#puntaje{
+
+    position:relative;
+    top: 500px;
+
+
+}
+
+
+
+#esfera{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    position: relative;
+
+    border-radius: 50%;
+
+    top: 300px;
+    left: 500px;
+}
+

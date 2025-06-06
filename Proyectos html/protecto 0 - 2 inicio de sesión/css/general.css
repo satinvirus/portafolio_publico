@@ -1,0 +1,22 @@
+*,
+*:before,
+*:after {
+
+    box-sizing: inherit;
+
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 96%;
+    font-size: 16px;
+    font-family: "Krub", sans-serif;
+    background-image: linear-gradient(to top, #b2d2d2 30%, white 100%); /*degradado de colores*/
+    
+}

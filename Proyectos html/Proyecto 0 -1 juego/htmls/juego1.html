@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pong</title>
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <link rel="shortcut icon" href="/recursos/57-578421_totoro-and-no-face-hd-png-download.png" type=".png">
+
+  
+  
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+      margin: 0;
+    }
+
+    canvas {
+      border: 1px solid white;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="pong"></canvas>
+
+<script>
+  // Obtén el contexto del canvas
+  const canvas = document.getElementById("pong");
+  const ctx = canvas.getContext("2d");
+
+  // Configuración del canvas
+  canvas.width = 800;
+  canvas.height = 400;
+
+  // Variables del juego
+  let ballSpeed = 4;
+  let ballDx = ballSpeed; // Velocidad horizontal de la pelota
+  let ballDy = ballSpeed; // Velocidad vertical de la pelota
+
+  const paddleWidth = 10;
+  const paddleHeight = 100;
+
+  let player1Y = canvas.height / 2 - paddleHeight / 2;
+  let player2Y = canvas.height / 2 - paddleHeight / 2;
+  let ballX = canvas.width / 2;
+  let ballY = canvas.height / 2;
+
+  let player1Speed = 0;
+  let player2Speed = 0;
+
+  // Dibujar las palas y la pelota
+  function drawPaddles() {
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, player1Y, paddleWidth, paddleHeight); // Pala jugador 1
+    ctx.fillRect(canvas.width - paddleWidth, player2Y, paddleWidth, paddleHeight); // Pala jugador 2
+  }
+
+  function drawBall() {
+    ctx.fillStyle = "white";
+    ctx.beginPath();
+    ctx.arc(ballX, ballY, 10, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Mover la pelota
+  function moveBall() {
+    ballX += ballDx;
+    ballY += ballDy;
+  }
+
+  // Rebote de la pelota
+  function ballBounce() {
+    if (ballY <= 0 || ballY >= canvas.height) ballDy *= -1; // Rebote en las paredes superior e inferior
+
+    if (ballX <= paddleWidth && ballY > player1Y && ballY < player1Y + paddleHeight) {
+      ballDx *= -1; // Rebote en la pala izquierda
+    }
+
+    if (ballX >= canvas.width - paddleWidth - 10 && ballY > player2Y && ballY < player2Y + paddleHeight) {
+      ballDx *= -1; // Rebote en la pala derecha
+    }
+
+    // Puntos
+    if (ballX <= 0 || ballX >= canvas.width) {
+      resetBall(); // Si la pelota sale por un lado, reinicia el juego
+    }
+  }
+
+  // Resetear la pelota
+  function resetBall() {
+    ballX = canvas.width / 2;
+    ballY = canvas.height / 2;
+    ballDx = ballSpeed * (Math.random() < 0.5 ? 1 : -1); // Dirección aleatoria
+    ballDy = ballSpeed * (Math.random() < 0.5 ? 1 : -1);
+  }
+
+  // Mover las palas
+  function movePaddles() {
+    if (player1Y + player1Speed >= 0 && player1Y + player1Speed <= canvas.height - paddleHeight) {
+      player1Y += player1Speed;
+    }
+
+    if (player2Y + player2Speed >= 0 && player2Y + player2Speed <= canvas.height - paddleHeight) {
+      player2Y += player2Speed;
+    }
+  }
+
+  // Detectar las teclas presionadas
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "w") player1Speed = -5; // Jugador 1 mueve hacia arriba
+    if (e.key === "s") player1Speed = 5;  // Jugador 1 mueve hacia abajo
+    if (e.key === "ArrowUp") player2Speed = -5; // Jugador 2 mueve hacia arriba
+    if (e.key === "ArrowDown") player2Speed = 5; // Jugador 2 mueve hacia abajo
+  });
+
+  document.addEventListener("keyup", (e) => {
+    if (e.key === "w" || e.key === "s") player1Speed = 0; // Deja de mover al jugador 1
+    if (e.key === "ArrowUp" || e.key === "ArrowDown") player2Speed = 0; // Deja de mover al jugador 2
+  });
+
+  // Función principal del juego
+  function gameLoop() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpiar el canvas
+    drawPaddles(); // Dibujar las palas
+    drawBall(); // Dibujar la pelota
+    moveBall(); // Mover la pelota
+    movePaddles(); // Mover las palas
+    ballBounce(); // Rebote de la pelota
+
+    requestAnimationFrame(gameLoop); // Continuar el loop
+  }
+
+  gameLoop(); // Iniciar el juego
+</script>
+
+</body>
+</html>
