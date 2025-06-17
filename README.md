@@ -2,7 +2,6 @@
 
 Este repositorio contiene mis proyectos de programación, incluyendo prácticas, apps, ejercicios y prototipos.
 
-aun estoy chiquito perdon :,D
 
 ## Proyectos incluidos
 
