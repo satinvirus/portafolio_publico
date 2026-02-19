@@ -1,0 +1,18 @@
+import random
+
+def tragaperras():
+	símbolos = ["7",":D","D:","8"]
+	input("Presiona Enter")
+	resultado =[]
+
+	for x in range(3):
+		rueda = random.choice(simbolos)
+		resultado.append(rueda)
+	print("{rueda}", end=" ", flush = true)
+	time.sleep(1)
+
+if resultado[] == resultado[] == resultado[]:
+	print("jackpot")
+
+while true:
+ 	tragaperras()

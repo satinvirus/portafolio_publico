@@ -1,0 +1,98 @@
+.hero {
+
+    background-image: url(/recursos/57-578421_totoro-and-no-face-hd-png-download.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    height: 350px;
+    position: relative; /*!importante*/
+    
+    border-radius: 20px;
+
+
+
+}
+
+
+
+
+.hero-content{
+
+    position: absolute; /*!importante*/
+    background-color: rgba(0, 0, 0, 0.652);
+    width: 100%;
+    height: 100%;
+
+    border-radius: 20px;
+
+    display: flex;
+    /*vertical alineacion*/
+    flex-direction: column;
+    align-items: center;
+    /*alineacion horizontal*/
+    justify-content: center;
+    
+
+    color: aliceblue;
+
+}
+
+/*.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}*/
+
+main{
+
+    padding: 0 auto;
+    height: 0 auto;
+
+
+    background-color: rgb(255, 246, 223);
+
+    margin: 25px 80px;
+    border-radius: 20px;
+
+}
+
+.servicios{
+
+    height: 0 auto;
+    
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+
+
+
+}
+
+.servicio{
+
+    border-radius: 20px;
+
+
+    background-color: rgba(109, 109, 109, 0.527);
+    height: 0 auto;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    
+
+    
+
+
+}
+
+.servicio img{
+
+    background-size: contain;
+    border-radius: 30%;
+    border-style:solid;
+    
+
+
+
+}

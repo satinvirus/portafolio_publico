@@ -1,0 +1,193 @@
+:root{
+
+    --font:#001f24;
+    --nav:#0f4b5f;
+    --bg:#b98166;
+    --color1:#e3c8a8;
+    --color2:#fffff9;
+
+
+
+}
+
+
+
+html{
+
+    
+    
+
+
+}
+
+
+body{
+    
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+
+}
+
+
+html,body{
+
+    font-family: 'Clash Display', sans-serif;
+    height: 100%;
+    background-image: linear-gradient(to bottom right,var(--bg),var(--color1));
+    background-size:auto;
+
+
+}
+
+.sombra{
+
+    box-shadow: 10px 10px 2px 5px rgba(0,0,0,0.5);
+
+
+}
+
+.titulo{
+
+    border-radius: 20px;
+    margin: 10px 10px;
+    background-color: var(--color1);
+    color: var(--font);
+    
+    width: 1200px;
+
+
+
+}
+
+nav{
+
+    background-color: #fffff9;
+    padding: 3px;
+    
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;   
+    
+    
+    width: 1500px;
+
+
+
+
+}
+
+
+nav ul{
+
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+
+}
+
+nav a{
+
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--nav);
+    padding: 10px;
+    
+    
+}
+
+nav a:hover{
+
+    background-color: var(--color1);
+    border-radius: 10px;
+
+
+}
+
+.lista li:last-child{
+    display: none;
+
+}
+
+
+
+
+@media (max-width: 1296px) {
+    
+    .titulo {
+
+        border-radius: 20px;
+        margin: 10px 10px;
+        background-color: var(--color1);
+        color: var(--font);
+
+        max-width: 700px;
+
+
+
+
+    }
+
+    .navbar {
+
+        background-color: #fffff9;
+
+
+        border-radius: 20px;
+
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        width: 700px;
+
+    }
+    
+    
+    .lista li:last-child{
+        display: block;
+    }
+
+    .lista li:nth-child(-n+4){
+        display: none;
+    }
+
+
+
+
+
+}
+
+@media (min-width: 1296px) {
+
+    
+
+
+
+
+}
+
+
+
+
+
+.sidebar{
+
+    display: none;
+}
+
+
+

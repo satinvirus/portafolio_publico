@@ -1,0 +1,196 @@
+html{
+
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+}
+
+
+body{
+
+    background:rgb(235, 235, 235);
+    color: black;
+
+}
+
+.drk_mode{
+
+    height: 60px;
+    width: 60px;
+    height: 100%;
+    border-radius: 50%;
+
+    background: none;
+
+    position: relative;
+    left: 95%;
+
+}
+
+/*este cambio es llamado por js no esta siendo llamdo directamente en el html*/
+.dark-mode{
+
+    background-color: rgba(0,0,0,1);
+   
+
+}
+
+/*aqui hace que cuando se active el modo dark se obcuresca ciertos elementos en especificos, en el codigo dice 
+"body.dark-mode" esta parte indica que cuando hay un cambio en el body, entonces llamamos algun elemento para que haga el cambio */
+body.dark-mode header {
+  background-color: rgba(0, 102, 235, 0.8);
+  
+}
+body.dark-mode .navbar p  {
+  color: rgb(255, 255, 255);  /**/
+  
+}
+body.dark-mode .izq a {
+  color: rgb(255, 255, 255);
+  
+}
+
+body.dark-mode main {
+  background-color: rgba(0, 102, 235, 0.8);
+  
+}
+
+
+
+
+
+.sombra{
+
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+
+
+}
+
+header{
+
+   
+    background: rgb(255, 255, 255);
+    margin: 25px 50px;
+    border-radius: 20px;
+
+}
+
+
+
+
+.panel{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+
+
+}
+
+.izq{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    
+   
+
+    
+
+
+
+}
+
+
+
+.navbar a{
+
+    text-decoration: none;
+    color: black;
+
+
+
+
+
+}
+
+.navbar ul{
+
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    text-align: center;
+
+    
+    
+
+
+}
+
+
+
+.navbar{
+
+    
+
+    width: 1000px;
+    
+
+
+}
+
+.izq a{
+
+    text-decoration: none;
+    color: black;
+
+
+}
+
+
+button{
+
+    height: 30px;
+    width: 30px;
+    background: none;
+    border-radius: 20px;
+    margin-left: 20px;
+    background-color: rgb(255, 255, 255);
+
+
+
+}
+
+button:hover{
+
+    background: rgb(177, 177, 177);
+
+
+
+}
+
+.der{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    
+    
+
+
+}
+
+
+
+
+/*responsive*/
+@media (max-width: 760px) {
+}
+
