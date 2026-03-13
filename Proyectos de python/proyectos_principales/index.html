@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitor de Infraestructura - Juan Trujano</title>
+
+
+    <style>
+        body { font-family: sans-serif; background: #1a1a1a; color: #00ff00; text-align: center; }
+        .card { border: 2px solid #00ff00; padding: 20px; margin: 20px auto; width: 300px; border-radius: 10px; }
+        .alerta { color: red; font-weight: bold; border-color: red; }
+    </style>
+
+
+    <script>
+        setTimeout(function(){ location.reload(); }, 5000);
+    </script>
+
+</head>
+<body>
+
+    <h1>Panel de Control de Servidor</h1>
+    <div id="status" class="card">
+        <h2>Estado Actual</h2>
+        <p>CPU: {{CPU_USO}}%</p>
+        <p>RAM: {{RAM_USO}}%</p>
+        <p>Última actualización: {{HORA}}</p>
+    </div>
+    
+</body>
+</html>
