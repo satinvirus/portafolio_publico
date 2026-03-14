@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Analítico - INECC / Sensor Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; text-align: center; padding: 20px; }
+        .contenedor { width: 80%; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; }
+    </style>
+
+
+</head>
+<body>
+
+
+    <div class="contenedor">
+        <h1>📊 Reporte de Sensores (Datos Limpios)</h1>
+        <p>Promedio de lectura: <strong>{{PROMEDIO}}</strong></p>
+        <canvas id="miGrafica"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('miGrafica').getContext('2d');
+        const miGrafica = new Chart(ctx, {
+            type: 'line', // Tipo de gráfica (línea)
+            data: {
+                labels: {{FECHAS}}, // Python pondrá las fechas aquí
+                datasets: [{
+                    label: 'Lectura del Sensor (Valor Limpio)',
+                    data: {{VALORES}}, // Python pondrá los valores aquí
+                    borderColor: 'rgba(41, 128, 185, 1)',
+                    backgroundColor: 'rgba(41, 128, 185, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.3 // Hace que la línea sea curva y elegante
+                }]
+            },
+            options: { responsive: true }
+        });
+    </script>
+
+
+
+</body>
+</html>
